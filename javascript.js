@@ -5,8 +5,91 @@ const amounts =
 15000, 25000, 50000, 100000, 250000
 ]
 
+let box1 = undefined
+let box2 = undefined
+let box3 = undefined
+let box4 = undefined
+let box5 = undefined
+let box6 = undefined
+let box7 = undefined
+let box8 = undefined
+let box9 = undefined
+let box10 = undefined
+let box11 = undefined
+let box12 = undefined
+let box13 = undefined
+let box14 = undefined
+let box15 = undefined
+let box16 = undefined
+let box17 = undefined
+let box18 = undefined
+let box19 = undefined
+let box20 = undefined
+
 function randomselector() {
     let amount = (amounts[Math.floor(Math.random()*amounts.length)]);
-    let index = amounts.indexOf(amount)
     amounts.splice(amounts.indexOf(amount), 1);
+    
+    if (box1 == undefined) {
+        box1 = amount
+        return
+    } else if (box2 == undefined) {
+        box2 = amount
+        return
+    } else if (box3 == undefined) {
+        box3 = amount
+        return
+    } else if (box4 == undefined) {
+        box4 = amount
+        return
+    } else if (box5 == undefined) {
+        box5 = amount
+        return
+    } else if (box6 == undefined) {
+        box6 = amount
+        return
+    } else if (box7 == undefined) {
+        box7 = amount
+        return
+    } else if (box8 == undefined) {
+        box8 = amount
+        return
+    } else if (box9 == undefined) {
+        box9 = amount
+        return
+    } else if (box10 == undefined) {
+        box10 = amount
+        return
+    } else if (box11 == undefined) {
+        box11 = amount
+        return
+    } else if (box12 == undefined) {
+        box12 = amount
+        return
+    } else if (box13 == undefined) {
+        box13 = amount
+        return
+    } else if (box14 == undefined) {
+        box14 = amount
+        return
+    } else if (box15 == undefined) {
+        box15 = amount
+        return
+    } else if (box16 == undefined) {
+        box16 = amount
+        return
+    } else if (box17 == undefined) {
+        box17 = amount
+        return
+    } else if (box18 == undefined) {
+        box18 = amount
+        return
+    } else if (box19 == undefined) {
+        box19 = amount
+        return
+    } else if (box20 == undefined) {
+        box20 = amount
+        return
+    }
 }
+
