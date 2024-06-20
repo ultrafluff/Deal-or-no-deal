@@ -25,6 +25,10 @@ let box17 = undefined
 let box18 = undefined
 let box19 = undefined
 let box20 = undefined
+let box21 = undefined
+let box22 = undefined
+let box23 = undefined
+let box24 = undefined
 
 function randomselector() {
     let amount = (amounts[Math.floor(Math.random()*amounts.length)]);
@@ -90,6 +94,22 @@ function randomselector() {
     } else if (box20 == undefined) {
         box20 = amount
         return
+    } else if (box21 == undefined) {
+        box21 = amount
+        return
+    } else if (box22 == undefined) {
+        box22 = amount
+        return
+    } else if (box23 == undefined) {
+        box23 = amount
+        return
+    } else if (box24 == undefined) {
+        box24 = amount
+        return
     }
 }
-
+function assignboxes() {
+    for (let i = 0; i < 24; i++) {
+    randomselector()
+    }
+}
