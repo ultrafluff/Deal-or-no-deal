@@ -1,4 +1,22 @@
+let body = document.querySelector(".body")
+let gamecontainer = document.createElement("div")
 
+gamecontainer.classList.add("gamecontainer")
+gamecontainer.classList.add("titlescreen")
+body.appendChild(gamecontainer)
+
+
+
+function startgame() {
+    gamecontainer.classList.remove("titlescreen")
+    gamecontainer.classList.add("gamescreen")
+}
+
+document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+        startgame()
+    }
+  })
 
 
 
@@ -8,14 +26,6 @@ const amounts =
 1000, 2500, 5000, 7500, 10000,
 15000, 25000, 50000, 100000, 250000
 ]
-
-let test = document.querySelector(".btn")
-let test2 = document.querySelector(".test")
-function text() {
-    test2.textContent = "hi"
-}
-
-test2.addEventListener("click", () => text())
 
 let box1 = undefined
 let box2 = undefined

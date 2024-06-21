@@ -6,11 +6,18 @@ html {
   height: 100%;
 }
 .gamecontainer {
-    background-image: url(images/titlecard.png);
+   
     height: 100%;
     background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 100%;
+  opacity: 100;
+}
+.titlescreen {
+  background-image: url(images/titlecard.png);
+}
+
+.gamescreen {
+  background-image: url(images/ingamebg.png);
 }
