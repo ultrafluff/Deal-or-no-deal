@@ -10,6 +10,19 @@ body.appendChild(gamecontainer)
 function startgame() {
     gamecontainer.classList.remove("titlescreen")
     gamecontainer.classList.add("gamescreen")
+    let boxcontainer = document.createElement("div")
+        boxcontainer.classList = "boxcontainer"
+        gamecontainer.appendChild(boxcontainer)
+    
+    
+    
+    for (let i = 0; i < 24; i++) {
+        let box = document.createElement("img")
+    box.src = "images/boxoutsideempty.png"
+    box.classList.add("box")
+    boxcontainer.appendChild(box)
+       
+    }
 }
 
 document.addEventListener('keyup', event => {
