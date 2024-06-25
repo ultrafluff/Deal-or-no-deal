@@ -13,16 +13,31 @@ function startgame() {
     let boxcontainer = document.createElement("div")
         boxcontainer.classList = "boxcontainer"
         gamecontainer.appendChild(boxcontainer)
+    let numbercontainer = document.createElement("div") 
+    numbercontainer.classList.add("numbercontainer")
+    body.appendChild(numbercontainer)
     
     
-    
-    for (let i = 0; i < 24; i++) {
-        let box = document.createElement("img")
-    box.src = "images/boxoutsideempty.png"
+    for (let i = 1; i < 25; i++) {
+        let box = document.createElement("div")
+        
+        
+        let boximg = document.createElement("img")
+        boximg.classList.add("img")
+        boximg.src = "images/boxoutsideempty.png"
     box.classList.add("box")
     boxcontainer.appendChild(box)
+        box.appendChild(boximg)
+        let number = document.createElement("h1")
+        number.classList.add("number")
+        number.textContent = i
+        box.appendChild(number)
+        console.log(number)
+
+    
        
     }
+    
 }
 
 document.addEventListener('keyup', event => {

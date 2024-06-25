@@ -1,3 +1,8 @@
+* {
+  font-family: 'Eurostile', sans-serif;
+  
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -8,6 +13,7 @@ html {
 .gamecontainer {
    
     height: 100%;
+    width: 100%;
     background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +33,18 @@ html {
 }
 
 .box {
-  height: 120px;
+  color: white;
+  font-size: 20px;
+  height: 140px;
+  width: 200px;
+  display: flex;
+  
+  
+}
+.img {
+  height: 140px;
+  width: 200px;
+  position: absolute;
 }
 
 .boxcontainer{
@@ -39,4 +56,31 @@ html {
   align-content: flex-start;
   gap: 20px;
   justify-content: center;
+  border: red solid 2px;
+}
+
+.numbercontainer {
+  height: 650px;
+  width: 1600px;
+  margin-top: -702px;
+  margin-left: -40px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  
+}
+
+.number {
+  font-size: 80px;
+  color: white;
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+ 
+
 }
