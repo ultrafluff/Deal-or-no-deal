@@ -14,12 +14,18 @@ function startgame() {
         boxcontainer.classList = "boxcontainer"
         gamecontainer.appendChild(boxcontainer)
 
+    let img = document.createElement("img")
+
     
     
     let box1 = document.createElement("div")
+    
+    
     box1.textContent = "1"
     box1.classList.add("box")
+    
     boxcontainer.appendChild(box1)
+    box1.appendChild(img)
     let box2 = document.createElement("div")
     box2.textContent = "2"
     box2.classList.add("box2")

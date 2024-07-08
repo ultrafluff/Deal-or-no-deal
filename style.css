@@ -46,9 +46,9 @@ html {
   
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
-  border: red solid 2px;
+ 
 }
 
 .numbercontainer {
@@ -60,6 +60,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+ 
 
   
 }
@@ -81,190 +82,343 @@ html {
 }
 .box {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.boxtext {
+  position: absolute;
+  bottom: 8px;
+  left: 16px
 }
 .box2 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 .box3 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }.box4 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box5 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box6 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box7 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box8 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }.box9 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box10 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box11 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box12 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box13 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box14 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }.box15 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box16 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box17 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box18 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box19 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box20 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box21 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+ 
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box22 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box23 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .box24 {
   color: white;
-  font-size: 20px;
-  height: 140px;
-  width: 200px;
+  font-size: 60px;
+  height: 120px;
+  width: 230px;
   display: flex;
-  border: red 2px solid;
+  
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/boxoutsideempty.png");
+  background-size: 230px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
