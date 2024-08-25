@@ -20,8 +20,9 @@ html {
   background-position: center;
   opacity: 100;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   
 }
 .titlescreen {
@@ -40,15 +41,294 @@ html {
 }
 
 .boxcontainer{
-  height: 650px;
+  
+  height: 520px;
   width: 1500px;
   display: flex;
-  
+  border: red 2px solid ;
   flex-wrap: wrap;
   align-content: flex-start;
   gap: 10px;
   justify-content: center;
- 
+  
+  
+}
+
+.amountholder {
+  height: 300px;
+  width: 1500px;
+  border: red 2px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.amountbox1 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox2 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox3 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox4 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox5 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox6 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox7 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox8 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox9 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox10 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox11 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox12 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox13 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox14 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox15 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox16 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox17 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox18 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox19 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox20 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox21 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox22 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+.amountbox23 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  
+} 
+.amountbox24 {
+  height: 50px;
+  width: 150px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  
 }
 
 .numbercontainer {

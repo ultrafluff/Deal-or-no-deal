@@ -7,12 +7,16 @@ body.appendChild(gamecontainer)
 
 
 
+
 function startgame() {
     gamecontainer.classList.remove("titlescreen")
     gamecontainer.classList.add("gamescreen")
     let boxcontainer = document.createElement("div")
         boxcontainer.classList = "boxcontainer"
         gamecontainer.appendChild(boxcontainer)
+    let amountcontainer = document.createElement("div")
+    amountcontainer.classList.add("amountholder")
+    gamecontainer.appendChild(amountcontainer)
 
     let img = document.createElement("img")
 
@@ -24,10 +28,12 @@ function startgame() {
     box1.textContent = "1"
     box1.classList.add("box")
     
+    
     boxcontainer.appendChild(box1)
     box1.appendChild(img)
     let box2 = document.createElement("div")
     box2.textContent = "2"
+    
     box2.classList.add("box2")
     boxcontainer.appendChild(box2)
     let box3 = document.createElement("div")
@@ -118,36 +124,179 @@ function startgame() {
     box24.textContent = "24"
     box24.classList.add("box24")
     boxcontainer.appendChild(box24)
-    box1.addEventListener("click", () =>alert("hi"))
-    box2.addEventListener("click", () =>alert("hi"))
-    box3.addEventListener("click", () =>alert("hi"))
-    box4.addEventListener("click", () =>alert("hi"))
-    box5.addEventListener("click", () =>alert("hi"))
-    box6.addEventListener("click", () =>alert("hi"))
-    box7.addEventListener("click", () =>alert("hi"))
-    box8.addEventListener("click", () =>alert("hi"))
-    box9.addEventListener("click", () =>alert("hi"))
-    box10.addEventListener("click", () =>alert("hi"))
-    box11.addEventListener("click", () =>alert("hi"))
-    box12.addEventListener("click", () =>alert("hi"))
-    box13.addEventListener("click", () =>alert("hi"))
-    box14.addEventListener("click", () =>alert("hi"))
-    box15.addEventListener("click", () =>alert("hi"))
-    box16.addEventListener("click", () =>alert("hi"))
-    box17.addEventListener("click", () =>alert("hi"))
-    box18.addEventListener("click", () =>alert("hi"))
-    box19.addEventListener("click", () =>alert("hi"))
-    box20.addEventListener("click", () =>alert("hi"))
-    box21.addEventListener("click", () =>alert("hi"))
-    box22.addEventListener("click", () =>alert("hi"))
-    box23.addEventListener("click", () =>alert("hi"))
-    box24.addEventListener("click", () =>alert("hi"))
-  
+    
+
+    function amountandboxdelelte(box, boxnumber) {
+        box.textContent = ""
+        box.style.backgroundImage = 'none'
+       
+        
+        for (const amount of amountboxes) {
+            if (amount.textContent == box.textContent) {
+                
+            }
+        }
+    }
+    function boxreveal(box, boxnumber) {
+        box.textContent = boxnumber
+        let deletenumber = boxnumber
+        box.style.color = "red"
+        setTimeout(() => amountandboxdelelte(box), 5000)
+        console.log(deletenumber)
+        deleteamount(deletenumber) 
+    }
+
+    function deleteamount(number) {
+        
+        
+        for (const amount of amountboxes) {
+            if (amount.textContent == number) {
+                amount.textContent = ""
+                amount.style.opacity = 0
+            } else {
+                continue
+            }
+        
+        }
+    }
+
+
+
+    box1.addEventListener("click", () => boxreveal(box2, boxnum2))
+    box2.addEventListener("click", () => boxreveal(box2, boxnum2))
+    box3.addEventListener("click", () => boxreveal(box3, boxnum3))
+    box4.addEventListener("click", () => boxreveal(box4, boxnum4))
+    box5.addEventListener("click", () => boxreveal(box5, boxnum5))
+    box6.addEventListener("click", () => boxreveal(box6, boxnum6))
+    box7.addEventListener("click", () => boxreveal(box7, boxnum7))
+    box8.addEventListener("click", () => boxreveal(box8, boxnum8))
+    box9.addEventListener("click", () => boxreveal(box9, boxnum9))
+    box10.addEventListener("click", () => boxreveal(box10, boxnum10))
+    box11.addEventListener("click", () => boxreveal(box11, boxnum11))
+    box12.addEventListener("click", () => boxreveal(box12, boxnum12))
+    box13.addEventListener("click", () => boxreveal(box13, boxnum13))
+    box14.addEventListener("click", () => boxreveal(box14, boxnum14))
+    box15.addEventListener("click", () => boxreveal(box15, boxnum15))
+    box16.addEventListener("click", () => boxreveal(box16, boxnum16))
+    box17.addEventListener("click", () => boxreveal(box17, boxnum17))
+    box18.addEventListener("click", () => boxreveal(box18, boxnum18))
+    box19.addEventListener("click", () => boxreveal(box19, boxnum19))
+    box20.addEventListener("click", () => boxreveal(box20, boxnum20))
+    box21.addEventListener("click", () => boxreveal(box21, boxnum21))
+    box22.addEventListener("click", () => boxreveal(box22, boxnum22))
+    box23.addEventListener("click", () => boxreveal(box23, boxnum23))
+    box24.addEventListener("click", () => boxreveal(box24, boxnum24))
+    
+    
+
+
+    let amount1 = document.createElement("div")
+    amount1.classList.add("amountbox1")
+    amountcontainer.appendChild(amount1)
+    amount1.textContent = "1"
+    let amount2 = document.createElement("div")
+    amount2.classList.add("amountbox2")
+    amountcontainer.appendChild(amount2)
+    amount2.textContent = "2"
+    let amount3 = document.createElement("div")
+    amount3.classList.add("amountbox3")
+    amountcontainer.appendChild(amount3)
+    amount3.textContent = "5"
+    let amount4 = document.createElement("div")
+    amount4.classList.add("amountbox4")
+    amountcontainer.appendChild(amount4)
+    amount4.textContent = "10"
+    let amount5 = document.createElement("div")
+    amount5.classList.add("amountbox5")
+    amountcontainer.appendChild(amount5)
+    amount5.textContent = "15"
+    let amount6 = document.createElement("div")
+    amount6.classList.add("amountbox6")
+    amountcontainer.appendChild(amount6)
+    amount6.textContent = "25"
+    let amount7 = document.createElement("div")
+    amount7.classList.add("amountbox7")
+    amountcontainer.appendChild(amount7)
+    amount7.textContent = "50"
+    let amount8 = document.createElement("div")
+    amount8.classList.add("amountbox8")
+    amountcontainer.appendChild(amount8)
+    amount8.textContent = "75"
+    let amount9 = document.createElement("div")
+    amount9.classList.add("amountbox9")
+    amountcontainer.appendChild(amount9)
+    amount9.textContent = "100"
+    let amount10 = document.createElement("div")
+    amount10.classList.add("amountbox10")
+    amountcontainer.appendChild(amount10)
+    amount10.textContent = "250"
+    let amount11 = document.createElement("div")
+    amount11.classList.add("amountbox11")
+    amountcontainer.appendChild(amount11)
+    amount11.textContent = "500"
+    let amount12 = document.createElement("div")
+    amount12.classList.add("amountbox12")
+    amountcontainer.appendChild(amount12)
+    amount12.textContent = "750"
+   let  amount13 = document.createElement("div")
+    amount13.classList.add("amountbox13")
+    amountcontainer.appendChild(amount13)
+    amount13.textContent = "1000"
+    let amount14 = document.createElement("div")
+    amount14.classList.add("amountbox14")
+    amountcontainer.appendChild(amount14)
+    amount14.textContent = "2500"
+    let amount15 = document.createElement("div")
+    amount15.classList.add("amountbox15")
+    amountcontainer.appendChild(amount15)
+    amount15.textContent = "5000"
+    let amount16 = document.createElement("div")
+    amount16.classList.add("amountbox16")
+    amountcontainer.appendChild(amount16)
+    amount16.textContent = "7500"
+    let amount17 = document.createElement("div")
+    amount17.classList.add("amountbox17")
+    amountcontainer.appendChild(amount17)
+    amount17.textContent = "10000"
+    let amount18 = document.createElement("div")
+    amount18.classList.add("amountbox18")
+    amountcontainer.appendChild(amount18)
+    amount18.textContent = "15000"
+    let amount19 = document.createElement("div")
+    amount19.classList.add("amountbox19")
+    amountcontainer.appendChild(amount19)
+    amount19.textContent = "25000"
+    let amount20 = document.createElement("div")
+    amount20.classList.add("amountbox20")
+    amountcontainer.appendChild(amount20)
+    amount20.textContent = "50000"
+    let amount21 = document.createElement("div")
+    amount21.classList.add("amountbox21")
+    amountcontainer.appendChild(amount21)
+    amount21.textContent = "75000"
+    let amount22 = document.createElement("div")
+    amount22.classList.add("amountbox22")
+    amountcontainer.appendChild(amount22)
+    amount22.textContent = "100000"
+    let amount23 = document.createElement("div")
+    amount23.classList.add("amountbox23")
+    amountcontainer.appendChild(amount23)
+    amount23.textContent = "250000"
+   let amount24 = document.createElement("div")
+    amount24.classList.add("amountbox24")
+    amountcontainer.appendChild(amount24)
+    amount24.textContent = "500000"
+    const amountboxes = [amount1, amount2, amount3, amount4,
+        amount5, amount6, amount7, amount8, amount9, amount10, amount11,
+        amount12, amount13, amount14, amount15, amount16, amount17, amount18,
+        amount19, amount20, amount21, amount22, amount23, amount24
+    ]
 }
 
 document.addEventListener('keyup', event => {
     if (event.code === 'Space') {
         startgame()
+        assignboxes()
     }
   })
   
@@ -164,106 +313,106 @@ const amounts =
 500000
 ]
 
-let box1 = undefined
-let box2 = undefined
-let box3 = undefined
-let box4 = undefined
-let box5 = undefined
-let box6 = undefined
-let box7 = undefined
-let box8 = undefined
-let box9 = undefined
-let box10 = undefined
-let box11 = undefined
-let box12 = undefined
-let box13 = undefined
-let box14 = undefined
-let box15 = undefined
-let box16 = undefined
-let box17 = undefined
-let box18 = undefined
-let box19 = undefined
-let box20 = undefined
-let box21 = undefined
-let box22 = undefined
-let box23 = undefined
-let box24 = undefined
+let boxnum1 = undefined
+let boxnum2 = undefined
+let boxnum3 = undefined
+let boxnum4 = undefined
+let boxnum5 = undefined
+let boxnum6 = undefined
+let boxnum7 = undefined
+let boxnum8 = undefined
+let boxnum9 = undefined
+let boxnum10 = undefined
+let boxnum11 = undefined
+let boxnum12 = undefined
+let boxnum13 = undefined
+let boxnum14 = undefined
+let boxnum15 = undefined
+let boxnum16 = undefined
+let boxnum17 = undefined
+let boxnum18 = undefined
+let boxnum19 = undefined
+let boxnum20 = undefined
+let boxnum21 = undefined
+let boxnum22 = undefined
+let boxnum23 = undefined
+let boxnum24 = undefined
 
 function randomselector() {
     let amount = (amounts[Math.floor(Math.random()*amounts.length)]);
     amounts.splice(amounts.indexOf(amount), 1);
     
-    if (box1 == undefined) {
-        box1 = amount
+    if (boxnum1 == undefined) {
+        boxnum1 = amount
         return
-    } else if (box2 == undefined) {
-        box2 = amount
+    } else if (boxnum2 == undefined) {
+        boxnum2 = amount
         return
-    } else if (box3 == undefined) {
-        box3 = amount
+    } else if (boxnum3 == undefined) {
+        boxnum3 = amount
         return
-    } else if (box4 == undefined) {
-        box4 = amount
+    } else if (boxnum4 == undefined) {
+        boxnum4 = amount
         return
-    } else if (box5 == undefined) {
-        box5 = amount
+    } else if (boxnum5 == undefined) {
+        boxnum5 = amount
         return
-    } else if (box6 == undefined) {
-        box6 = amount
+    } else if (boxnum6 == undefined) {
+        boxnum6 = amount
         return
-    } else if (box7 == undefined) {
-        box7 = amount
+    } else if (boxnum7 == undefined) {
+        boxnum7 = amount
         return
-    } else if (box8 == undefined) {
-        box8 = amount
+    } else if (boxnum8 == undefined) {
+        boxnum8 = amount
         return
-    } else if (box9 == undefined) {
-        box9 = amount
+    } else if (boxnum9 == undefined) {
+        boxnum9 = amount
         return
-    } else if (box10 == undefined) {
-        box10 = amount
+    } else if (boxnum10 == undefined) {
+        boxnum10 = amount
         return
-    } else if (box11 == undefined) {
-        box11 = amount
+    } else if (boxnum11 == undefined) {
+        boxnum11 = amount
         return
-    } else if (box12 == undefined) {
-        box12 = amount
+    } else if (boxnum12 == undefined) {
+        boxnum12 = amount
         return
-    } else if (box13 == undefined) {
-        box13 = amount
+    } else if (boxnum13 == undefined) {
+        boxnum13 = amount
         return
-    } else if (box14 == undefined) {
-        box14 = amount
+    } else if (boxnum14 == undefined) {
+        boxnum14 = amount
         return
-    } else if (box15 == undefined) {
-        box15 = amount
+    } else if (boxnum15 == undefined) {
+        boxnum15 = amount
         return
-    } else if (box16 == undefined) {
-        box16 = amount
+    } else if (boxnum16 == undefined) {
+        boxnum16 = amount
         return
-    } else if (box17 == undefined) {
-        box17 = amount
+    } else if (boxnum17 == undefined) {
+        boxnum17 = amount
         return
-    } else if (box18 == undefined) {
-        box18 = amount
+    } else if (boxnum18 == undefined) {
+        boxnum18 = amount
         return
-    } else if (box19 == undefined) {
-        box19 = amount
+    } else if (boxnum19 == undefined) {
+        boxnum19 = amount
         return
-    } else if (box20 == undefined) {
-        box20 = amount
+    } else if (boxnum20 == undefined) {
+        boxnum20 = amount
         return
-    } else if (box21 == undefined) {
-        box21 = amount
+    } else if (boxnum21 == undefined) {
+        boxnum21 = amount
         return
-    } else if (box22 == undefined) {
-        box22 = amount
+    } else if (boxnum22 == undefined) {
+        boxnum22 = amount
         return
-    } else if (box23 == undefined) {
-        box23 = amount
+    } else if (boxnum23 == undefined) {
+        boxnum23 = amount
         return
-    } else if (box24 == undefined) {
-        box24 = amount
+    } else if (boxnum24 == undefined) {
+        boxnum24 = amount
         return
     }
 }
