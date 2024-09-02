@@ -6,7 +6,7 @@ gamecontainer.classList.add("titlescreen")
 body.appendChild(gamecontainer)
 
 
-
+let boxisselected
 
 function startgame() {
     gamecontainer.classList.remove("titlescreen")
@@ -15,16 +15,44 @@ function startgame() {
         boxcontainer.classList = "boxcontainer"
         gamecontainer.appendChild(boxcontainer)
     let amountcontainer = document.createElement("div")
-    amountcontainer.classList.add("amountholder")
+    
+    amountcontainer.classList.add("amountandboxcontainer")
     gamecontainer.appendChild(amountcontainer)
+    let boxholder = document.createElement("div")
+    boxholder.classList = "boxholder"
+
+    let amountholder = document.createElement("div")
+    amountholder.classList = "amountholder"
+    amountcontainer.appendChild(amountholder)
+
+    
 
     let img = document.createElement("img")
 
     
     
     let box1 = document.createElement("div")
-    
-    
+    boxisselected = false
+
+    function pickyourbox(box) {
+        let switchbox = document.createElement("div")
+        switchbox.classList = "box"
+        switchbox.textContent = box.textContent
+        let yourboxtext = document.createElement("div")
+        yourboxtext.classList = "yourbox"
+        yourboxtext.textContent = "your box"
+        boxholder.appendChild(yourboxtext)
+        boxholder.appendChild(switchbox)
+        box.textContent = ""
+        box.style.opacity = 0
+        boxisselected = true
+        
+       
+    }
+  
+   
+
+
     box1.textContent = "1"
     box1.classList.add("box")
     
@@ -124,45 +152,10 @@ function startgame() {
     box24.textContent = "24"
     box24.classList.add("box24")
     boxcontainer.appendChild(box24)
+  
     
-
-    function amountandboxdelelte(box, boxnumber) {
-        box.textContent = ""
-        box.style.backgroundImage = 'none'
-       
-        
-        for (const amount of amountboxes) {
-            if (amount.textContent == box.textContent) {
-                
-            }
-        }
-    }
-    function boxreveal(box, boxnumber) {
-        box.textContent = boxnumber
-        let deletenumber = boxnumber
-        box.style.color = "red"
-        setTimeout(() => amountandboxdelelte(box), 5000)
-        console.log(deletenumber)
-        deleteamount(deletenumber) 
-    }
-
-    function deleteamount(number) {
-        
-        
-        for (const amount of amountboxes) {
-            if (amount.textContent == number) {
-                amount.textContent = ""
-                amount.style.opacity = 0
-            } else {
-                continue
-            }
-        
-        }
-    }
-
-
-
-    box1.addEventListener("click", () => boxreveal(box2, boxnum2))
+    
+        box1.addEventListener("click", () => boxreveal(box1, boxnum1))
     box2.addEventListener("click", () => boxreveal(box2, boxnum2))
     box3.addEventListener("click", () => boxreveal(box3, boxnum3))
     box4.addEventListener("click", () => boxreveal(box4, boxnum4))
@@ -187,110 +180,164 @@ function startgame() {
     box23.addEventListener("click", () => boxreveal(box23, boxnum23))
     box24.addEventListener("click", () => boxreveal(box24, boxnum24))
     
+    function amountandboxdelelte(box, boxnumber) {
+        box.textContent = ""
+        box.style.backgroundImage = 'none'
+       
+        
+        for (const amount of amountboxes) {
+            if (amount.textContent == box.textContent) {
+                
+            }
+        }
+    }
+    function boxreveal(box, boxnumber) {
+        if (boxisselected == false) {
+            let switchbox = document.createElement("div")
+            switchbox.classList = "box"
+            switchbox.textContent = box.textContent
+            let yourboxtext = document.createElement("div")
+            yourboxtext.classList = "yourbox"
+            yourboxtext.textContent = "your box"
+            boxholder.appendChild(yourboxtext)
+            boxholder.appendChild(switchbox)
+            box.textContent = ""
+            box.style.opacity = 0
+            boxisselected = true    
+        } else {
+        box.textContent = boxnumber
+        let deletenumber = boxnumber
+        box.style.color = "red"
+        setTimeout(() => amountandboxdelelte(box), 5000)
+        console.log(deletenumber)
+        deleteamount(deletenumber) 
+        }
+    }
+
+    function deleteamount(number) {
+        
+        
+        for (const amount of amountboxes) {
+            if (amount.textContent == number) {
+                amount.textContent = ""
+                amount.style.opacity = 0
+                console.log(boxisselected)
+            } else {
+                continue
+            }
+        
+        }
+    }
+
+
+
+   
+    
     
 
 
     let amount1 = document.createElement("div")
     amount1.classList.add("amountbox1")
-    amountcontainer.appendChild(amount1)
+    amountholder.appendChild(amount1)
     amount1.textContent = "1"
     let amount2 = document.createElement("div")
     amount2.classList.add("amountbox2")
-    amountcontainer.appendChild(amount2)
+    amountholder.appendChild(amount2)
     amount2.textContent = "2"
     let amount3 = document.createElement("div")
     amount3.classList.add("amountbox3")
-    amountcontainer.appendChild(amount3)
+    amountholder.appendChild(amount3)
     amount3.textContent = "5"
     let amount4 = document.createElement("div")
     amount4.classList.add("amountbox4")
-    amountcontainer.appendChild(amount4)
+    amountholder.appendChild(amount4)
     amount4.textContent = "10"
     let amount5 = document.createElement("div")
     amount5.classList.add("amountbox5")
-    amountcontainer.appendChild(amount5)
+    amountholder.appendChild(amount5)
     amount5.textContent = "15"
     let amount6 = document.createElement("div")
     amount6.classList.add("amountbox6")
-    amountcontainer.appendChild(amount6)
+    amountholder.appendChild(amount6)
     amount6.textContent = "25"
     let amount7 = document.createElement("div")
     amount7.classList.add("amountbox7")
-    amountcontainer.appendChild(amount7)
+    amountholder.appendChild(amount7)
     amount7.textContent = "50"
     let amount8 = document.createElement("div")
     amount8.classList.add("amountbox8")
-    amountcontainer.appendChild(amount8)
+    amountholder.appendChild(amount8)
     amount8.textContent = "75"
     let amount9 = document.createElement("div")
     amount9.classList.add("amountbox9")
-    amountcontainer.appendChild(amount9)
+    amountholder.appendChild(amount9)
     amount9.textContent = "100"
     let amount10 = document.createElement("div")
     amount10.classList.add("amountbox10")
-    amountcontainer.appendChild(amount10)
+    amountholder.appendChild(amount10)
     amount10.textContent = "250"
     let amount11 = document.createElement("div")
     amount11.classList.add("amountbox11")
-    amountcontainer.appendChild(amount11)
+    amountholder.appendChild(amount11)
     amount11.textContent = "500"
     let amount12 = document.createElement("div")
     amount12.classList.add("amountbox12")
-    amountcontainer.appendChild(amount12)
+    amountholder.appendChild(amount12)
     amount12.textContent = "750"
    let  amount13 = document.createElement("div")
     amount13.classList.add("amountbox13")
-    amountcontainer.appendChild(amount13)
+    amountholder.appendChild(amount13)
     amount13.textContent = "1000"
     let amount14 = document.createElement("div")
     amount14.classList.add("amountbox14")
-    amountcontainer.appendChild(amount14)
+    amountholder.appendChild(amount14)
     amount14.textContent = "2500"
     let amount15 = document.createElement("div")
     amount15.classList.add("amountbox15")
-    amountcontainer.appendChild(amount15)
+    amountholder.appendChild(amount15)
     amount15.textContent = "5000"
     let amount16 = document.createElement("div")
     amount16.classList.add("amountbox16")
-    amountcontainer.appendChild(amount16)
+    amountholder.appendChild(amount16)
     amount16.textContent = "7500"
     let amount17 = document.createElement("div")
     amount17.classList.add("amountbox17")
-    amountcontainer.appendChild(amount17)
+    amountholder.appendChild(amount17)
     amount17.textContent = "10000"
     let amount18 = document.createElement("div")
     amount18.classList.add("amountbox18")
-    amountcontainer.appendChild(amount18)
+    amountholder.appendChild(amount18)
     amount18.textContent = "15000"
     let amount19 = document.createElement("div")
     amount19.classList.add("amountbox19")
-    amountcontainer.appendChild(amount19)
+    amountholder.appendChild(amount19)
     amount19.textContent = "25000"
     let amount20 = document.createElement("div")
     amount20.classList.add("amountbox20")
-    amountcontainer.appendChild(amount20)
+    amountholder.appendChild(amount20)
     amount20.textContent = "50000"
     let amount21 = document.createElement("div")
     amount21.classList.add("amountbox21")
-    amountcontainer.appendChild(amount21)
+    amountholder.appendChild(amount21)
     amount21.textContent = "75000"
     let amount22 = document.createElement("div")
     amount22.classList.add("amountbox22")
-    amountcontainer.appendChild(amount22)
+    amountholder.appendChild(amount22)
     amount22.textContent = "100000"
     let amount23 = document.createElement("div")
     amount23.classList.add("amountbox23")
-    amountcontainer.appendChild(amount23)
+    amountholder.appendChild(amount23)
     amount23.textContent = "250000"
    let amount24 = document.createElement("div")
     amount24.classList.add("amountbox24")
-    amountcontainer.appendChild(amount24)
+    amountholder.appendChild(amount24)
     amount24.textContent = "500000"
     const amountboxes = [amount1, amount2, amount3, amount4,
         amount5, amount6, amount7, amount8, amount9, amount10, amount11,
         amount12, amount13, amount14, amount15, amount16, amount17, amount18,
         amount19, amount20, amount21, amount22, amount23, amount24
     ]
+    amountcontainer.appendChild(boxholder)
 }
 
 document.addEventListener('keyup', event => {
