@@ -153,7 +153,7 @@ function startgame() {
     box24.classList.add("box24")
     boxcontainer.appendChild(box24)
   
-    
+    let counter = 0
     
         box1.addEventListener("click", () => boxreveal(box1, boxnum1))
     box2.addEventListener("click", () => boxreveal(box2, boxnum2))
@@ -211,6 +211,37 @@ function startgame() {
         setTimeout(() => amountandboxdelelte(box), 5000)
         console.log(deletenumber)
         deleteamount(deletenumber) 
+        setTimeout(() => {
+            counter++
+        }, 5000)
+        if (counter == 4) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)} else if (counter == 9) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)} else if (counter == 12) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)} else if (counter == 15) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)} else if (counter == 18) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)}else if (counter == 20) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)}
+            else if (counter == 22) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)}
+            
+        
+        
+        console.log(counter)
+        
         }
     }
 
@@ -229,8 +260,8 @@ function startgame() {
         }
     }
 
-
-
+    
+    
    
     
     
