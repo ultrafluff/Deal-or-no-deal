@@ -14,6 +14,16 @@ function startgame() {
     let boxcontainer = document.createElement("div")
         boxcontainer.classList = "boxcontainer"
         gamecontainer.appendChild(boxcontainer)
+    let boxesrightside = document.createElement("div")
+    let boxesleftside = document.createElement("div")
+    boxesleftside.classList.add("boxesleftside")
+    boxesrightside.classList.add("boxesrightside")
+    let dealornodealcontainer = document.createElement("div")
+    dealornodealcontainer.classList.add("dealornodealconatiner")
+    boxcontainer.appendChild(boxesleftside)
+    boxcontainer.appendChild(dealornodealcontainer)
+    boxcontainer.appendChild(boxesrightside)
+   
     let amountcontainer = document.createElement("div")
     
     amountcontainer.classList.add("amountandboxcontainer")
@@ -34,21 +44,7 @@ function startgame() {
     let box1 = document.createElement("div")
     boxisselected = false
 
-    function pickyourbox(box) {
-        let switchbox = document.createElement("div")
-        switchbox.classList = "box"
-        switchbox.textContent = box.textContent
-        let yourboxtext = document.createElement("div")
-        yourboxtext.classList = "yourbox"
-        yourboxtext.textContent = "your box"
-        boxholder.appendChild(yourboxtext)
-        boxholder.appendChild(switchbox)
-        box.textContent = ""
-        box.style.opacity = 0
-        boxisselected = true
-        
-       
-    }
+    
   
    
 
@@ -57,101 +53,101 @@ function startgame() {
     box1.classList.add("box")
     
     
-    boxcontainer.appendChild(box1)
+    boxesleftside.appendChild(box1)
     box1.appendChild(img)
     let box2 = document.createElement("div")
     box2.textContent = "2"
     
     box2.classList.add("box2")
-    boxcontainer.appendChild(box2)
+    boxesleftside.appendChild(box2)
     let box3 = document.createElement("div")
     box3.textContent = "3"
     box3.classList.add("box3")
-    boxcontainer.appendChild(box3)
+    boxesleftside.appendChild(box3)
     let box4 = document.createElement("div")
     box4.textContent = "4"
     box4.classList.add("box4")
-    boxcontainer.appendChild(box4)
+    boxesleftside.appendChild(box4)
     let box5 = document.createElement("div")
     box5.textContent = "5"
     box5.classList.add("box5")
-    boxcontainer.appendChild(box5)
+    boxesleftside.appendChild(box5)
     let box6 = document.createElement("div")
     box6.textContent = "6"
     box6.classList.add("box6")
-    boxcontainer.appendChild(box6)
+    boxesleftside.appendChild(box6)
     let box7 = document.createElement("div")
     box7.textContent = "7"
     box7.classList.add("box7")
-    boxcontainer.appendChild(box7)
+    boxesleftside.appendChild(box7)
     let box8 = document.createElement("div")
     box8.textContent = "8"
     box8.classList.add("box8")
-    boxcontainer.appendChild(box8)
+    boxesleftside.appendChild(box8)
     let box9 = document.createElement("div")
     box9.textContent = "9"
     box9.classList.add("box9")
-    boxcontainer.appendChild(box9)
+    boxesleftside.appendChild(box9)
     let box10 = document.createElement("div")
     box10.textContent = "10"
     box10.classList.add("box10")
-    boxcontainer.appendChild(box10)
+    boxesleftside.appendChild(box10)
     let box11 = document.createElement("div")
     box11.textContent = "11"
     box11.classList.add("box11")
-    boxcontainer.appendChild(box11)
+    boxesleftside.appendChild(box11)
     let box12 = document.createElement("div")
     box12.textContent = "12"
     box12.classList.add("box12")
-    boxcontainer.appendChild(box12)
+    boxesleftside.appendChild(box12)
     let box13 = document.createElement("div")
     box13.textContent = "13"
     box13.classList.add("box13")
-    boxcontainer.appendChild(box13)
+    boxesrightside.appendChild(box13)
     let box14 = document.createElement("div")
     box14.textContent = "14"
     box14.classList.add("box14")
-    boxcontainer.appendChild(box14)
+    boxesrightside.appendChild(box14)
     let box15 = document.createElement("div")
     box15.textContent = "15"
     box15.classList.add("box15")
-    boxcontainer.appendChild(box15)
+    boxesrightside.appendChild(box15)
     let box16 = document.createElement("div")
     box16.textContent = "16"
     box16.classList.add("box16")
-    boxcontainer.appendChild(box16)
+    boxesrightside.appendChild(box16)
     let box17 = document.createElement("div")
     box17.textContent = "17"
     box17.classList.add("box17")
-    boxcontainer.appendChild(box17)
+    boxesrightside.appendChild(box17)
     let box18 = document.createElement("div")
     box18.textContent = "18"
     box18.classList.add("box18")
-    boxcontainer.appendChild(box18)
+    boxesrightside.appendChild(box18)
     let box19 = document.createElement("div")
     box19.textContent = "19"
     box19.classList.add("box19")
-    boxcontainer.appendChild(box19)
+    boxesrightside.appendChild(box19)
     let box20 = document.createElement("div")
     box20.textContent = "20"
     box20.classList.add("box20")
-    boxcontainer.appendChild(box20)
+    boxesrightside.appendChild(box20)
     let box21 = document.createElement("div")
     box21.textContent = "21"
     box21.classList.add("box21")
-    boxcontainer.appendChild(box21)
+    boxesrightside.appendChild(box21)
     let box22 = document.createElement("div")
     box22.textContent = "22"
     box22.classList.add("box22")
-    boxcontainer.appendChild(box22)
+    boxesrightside.appendChild(box22)
     let box23 = document.createElement("div")
     box23.textContent = "23"
     box23.classList.add("box23")
-    boxcontainer.appendChild(box23)
+    boxesrightside.appendChild(box23)
     let box24 = document.createElement("div")
     box24.textContent = "24"
     box24.classList.add("box24")
-    boxcontainer.appendChild(box24)
+    boxesrightside.appendChild(box24)
   
     let counter = 0
     
@@ -217,26 +213,29 @@ function startgame() {
         if (counter == 4) {
             setTimeout(() => {
             alert("deal or no deal")
-            }, 5000)} else if (counter == 9) {
+            }, 5000)} else if (counter == 8) {
             setTimeout(() => {
             alert("deal or no deal")
-            }, 5000)} else if (counter == 12) {
+            }, 5000)} else if (counter == 11) {
             setTimeout(() => {
             alert("deal or no deal")
-            }, 5000)} else if (counter == 15) {
+            }, 5000)} else if (counter == 14) {
             setTimeout(() => {
             alert("deal or no deal")
-            }, 5000)} else if (counter == 18) {
+            }, 5000)} else if (counter == 17) {
             setTimeout(() => {
             alert("deal or no deal")
-            }, 5000)}else if (counter == 20) {
-            setTimeout(() => {
-            alert("deal or no deal")
-            }, 5000)}
-            else if (counter == 22) {
+            }, 5000)}else if (counter == 19) {
             setTimeout(() => {
             alert("deal or no deal")
             }, 5000)}
+            else if (counter == 21) {
+            setTimeout(() => {
+            alert("deal or no deal")
+            }, 5000)} else if (counter == 22) {
+                setTimeout(() => {
+                alert("deal or no deal")
+                }, 5000)}
             
         
         
