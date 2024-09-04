@@ -20,10 +20,26 @@ function startgame() {
     boxesrightside.classList.add("boxesrightside")
     let dealornodealcontainer = document.createElement("div")
     dealornodealcontainer.classList.add("dealornodealconatiner")
+
+    let offertext = document.createElement("div")
+    offertext.classList.add("offertext")
     boxcontainer.appendChild(boxesleftside)
     boxcontainer.appendChild(dealornodealcontainer)
     boxcontainer.appendChild(boxesrightside)
-   
+
+    let offerbox = document.createElement("div")
+    offerbox.classList.add("offerbox")
+    dealornodealcontainer.appendChild(offerbox)
+    let offer = document.createElement("input")
+    offer.classList.add("offertextbox")
+    offerbox.appendChild(offer)
+    
+    offerbox.style.display = "none"
+    
+    
+
+    
+
     let amountcontainer = document.createElement("div")
     
     amountcontainer.classList.add("amountandboxcontainer")
@@ -187,6 +203,24 @@ function startgame() {
             }
         }
     }
+
+       
+    
+    function offernumber() {
+        offerbox.style.display = "flex"
+        offerbox.textContent = "offer:"
+        offerbox.appendChild(offer)
+        addEventListener("keydown", function (e) {
+            if (e.code === "Enter") {
+                let offeramount = offer.value
+                offerbox.removeChild(offer)
+                offertext.textContent = offeramount
+                offerbox.appendChild(offertext)
+
+            }
+        })
+        
+    }
     function boxreveal(box, boxnumber) {
         if (boxisselected == false) {
             let switchbox = document.createElement("div")
@@ -210,9 +244,9 @@ function startgame() {
         setTimeout(() => {
             counter++
         }, 5000)
-        if (counter == 4) {
+        if (counter == 0) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)} else if (counter == 8) {
             setTimeout(() => {
             alert("deal or no deal")

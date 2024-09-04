@@ -67,6 +67,9 @@ html {
   height: 500px;
   width: 500px;
   border: red 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .amountandboxcontainer {
@@ -742,4 +745,40 @@ html {
   background-size: 178px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.offerbox {
+  height: 125px;
+  width: 350px;
+  border: #2460ae 4px solid;
+  background-color: #173e71 ;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  
+}
+
+.offertextbox {
+  height: 40px;
+  width: 350px;
+  opacity: 0%;
+}
+
+.offertext {
+  font-size: 50px;
+  color: white;
+}
+.dealornodeal {
+
+}
+
+.dealbutton {
+
+}
+.nodealbutton {
+
 }
