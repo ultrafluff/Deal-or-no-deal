@@ -33,6 +33,18 @@ function startgame() {
     let offer = document.createElement("input")
     offer.classList.add("offertextbox")
     offerbox.appendChild(offer)
+
+    let dealornodeal = document.createElement("div")
+    dealornodeal.classList.add("dealornodeal")
+    
+    let dealbutton = document.createElement("button")
+    dealbutton.classList.add("dealbutton")
+    dealbutton.textContent = "deal"
+    let nodealbutton = document.createElement("button")
+    nodealbutton.classList.add("nodealbutton")
+    nodealbutton.textContent = "No Deal"
+
+
     
     offerbox.style.display = "none"
     
@@ -210,12 +222,17 @@ function startgame() {
         offerbox.style.display = "flex"
         offerbox.textContent = "offer:"
         offerbox.appendChild(offer)
+        dealornodealcontainer.appendChild(dealornodeal)
         addEventListener("keydown", function (e) {
             if (e.code === "Enter") {
                 let offeramount = offer.value
                 offerbox.removeChild(offer)
                 offertext.textContent = offeramount
                 offerbox.appendChild(offertext)
+                dealornodeal.style.opacity = "100%"
+                
+                dealornodeal.appendChild(dealbutton)
+                dealornodeal.appendChild(nodealbutton)
 
             }
         })

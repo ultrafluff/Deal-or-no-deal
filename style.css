@@ -52,24 +52,27 @@ html {
 .boxesrightside {
   height: 500px;
   width: 700px;
-  border: red 2px solid;
+  
   display: flex;
   flex-wrap: wrap;
 }
 .boxesleftside {
   height: 500px;
   width: 700px;
-  border: red 2px solid;
+  
   display: flex;
   flex-wrap: wrap;
 }
 .dealornodealconatiner {
   height: 500px;
   width: 500px;
-  border: red 2px solid;
+  
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 75px
+ 
 }
 
 .amountandboxcontainer {
@@ -773,12 +776,21 @@ html {
   color: white;
 }
 .dealornodeal {
-
+    height: 150px;
+    width: 375px;
+    
+    opacity: 0%;
+    gap: 30px;
+    display: flex;
 }
 
 .dealbutton {
-
+  height: 75px;
+  width: 175px;
+  font-size: 30px;
 }
 .nodealbutton {
-
+  height: 75px;
+  width: 175px;
+  font-size: 30px;
 }
