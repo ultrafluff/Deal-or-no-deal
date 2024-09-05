@@ -7,7 +7,7 @@ body.appendChild(gamecontainer)
 
 
 let boxisselected
-
+let win = ""
 function startgame() {
     gamecontainer.classList.remove("titlescreen")
     gamecontainer.classList.add("gamescreen")
@@ -215,7 +215,72 @@ function startgame() {
             }
         }
     }
+    
+    function endgame() {
+        boxesleftside.removeChild(box1)
+        boxesleftside.removeChild(box2)
+        boxesleftside.removeChild(box3)
+        boxesleftside.removeChild(box4)
+        boxesleftside.removeChild(box5)
+        boxesleftside.removeChild(box6)
+        boxesleftside.removeChild(box7)
+        boxesleftside.removeChild(box8)
+        boxesleftside.removeChild(box9)
+        boxesleftside.removeChild(box10)
+        boxesleftside.removeChild(box11)
+        boxesleftside.removeChild(box12)
+        boxesrightside.removeChild(box13)
+        boxesrightside.removeChild(box14)
+        boxesrightside.removeChild(box15)
+        boxesrightside.removeChild(box16)
+        boxesrightside.removeChild(box17)
+        boxesrightside.removeChild(box18)
+        boxesrightside.removeChild(box19)
+        boxesrightside.removeChild(box20)
+        boxesrightside.removeChild(box21)
+        boxesrightside.removeChild(box22)
+        boxesrightside.removeChild(box23)
+        boxesrightside.removeChild(box24)
+        amountholder.removeChild(amount1)
+        amountholder.removeChild(amount2)
+        amountholder.removeChild(amount3)
+        amountholder.removeChild(amount4)
+        amountholder.removeChild(amount5)
+        amountholder.removeChild(amount6)
+        amountholder.removeChild(amount7)
+        amountholder.removeChild(amount8)
+        amountholder.removeChild(amount9)
+        amountholder.removeChild(amount10)
+        amountholder.removeChild(amount11)
+        amountholder.removeChild(amount12)
+        amountholder.removeChild(amount13)
+        amountholder.removeChild(amount14)
+        amountholder.removeChild(amount15)
+        amountholder.removeChild(amount16)
+        amountholder.removeChild(amount17)
+        amountholder.removeChild(amount18)
+        amountholder.removeChild(amount19)
+        amountholder.removeChild(amount20)
+        amountholder.removeChild(amount21)
+        amountholder.removeChild(amount22)
+        amountholder.removeChild(amount23)
+        amountholder.removeChild(amount24)
+        if (win == "deal") {
+            
+        } else if (win == "nodeal") {
 
+        }
+    }
+
+    function deal() {
+        offerbox.style.display = "none"
+        dealornodealcontainer.removeChild(dealornodeal)
+        dealornodeal.removeChild(dealbutton)
+        dealornodeal.removeChild(nodealbutton)
+        offer.value = ""
+        win = "deal"
+        endgame()
+    }
        
     function nodeal() {
         offerbox.style.display = "none"
@@ -223,6 +288,7 @@ function startgame() {
         dealornodeal.removeChild(dealbutton)
         dealornodeal.removeChild(nodealbutton)
         offer.value = ""
+        win = "nodeal"
         
     }
     
@@ -242,10 +308,14 @@ function startgame() {
                 dealornodeal.appendChild(nodealbutton)
 
                 nodealbutton.addEventListener("click", nodeal)
+                dealbutton.addEventListener("click", deal)
             }
         })
         
     }
+
+    
+
     function boxreveal(box, boxnumber) {
         if (boxisselected == false) {
             let switchbox = document.createElement("div")

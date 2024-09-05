@@ -794,3 +794,10 @@ html {
   width: 175px;
   font-size: 30px;
 }
+
+.winbox {
+  height: 300px;
+  width: 350px;
+  background-color: #1b3e82  ;
+  border: #2460ae 4px solid;
+}
