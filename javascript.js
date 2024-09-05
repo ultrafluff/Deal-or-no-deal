@@ -47,7 +47,7 @@ function startgame() {
     let winbox = document.createElement("div")
     let dealtextcontainer = document.createElement("div")
     dealtextcontainer.classList.add("dealtextcontainer")
-    let boxtextcontainer =document.createElement("div")
+    let boxtextcontainer = document.createElement("div")
     boxtextcontainer.classList.add("boxtextcontainer")
     boxtextcontainer.textContent = "your box had:"
 
@@ -291,7 +291,9 @@ function startgame() {
             dealtextcontainer.appendChild(dealtext)
             dealtextcontainer.appendChild(dealtext2)
         } else if (win == "nodeal") {
-            
+            let dealtext = document.createElement("div")
+            dealtext.classList.add("dealtext")
+            dealtext.textContent = "You win:"
         }
     }
     box1.addEventListener("click", () => getwinnumber(boxnum1))
@@ -375,31 +377,31 @@ function startgame() {
         setTimeout(() => {
             counter++
         }, 5000)
-        if (counter == 4) {
+        if (counter == 5) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)} else if (counter == 8) {
+            }, 5000)} else if (counter == 9) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)} else if (counter == 11) {
+            }, 5000)} else if (counter == 12) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)} else if (counter == 14) {
+            }, 5000)} else if (counter == 15) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)} else if (counter == 17) {
+            }, 5000)} else if (counter == 18) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)}else if (counter == 19) {
+            }, 5000)}else if (counter == 20) {
             setTimeout(() => {
                 offernumber()
             }, 5000)}
-            else if (counter == 21) {
+            else if (counter == 22) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)} else if (counter == 22) {
+            }, 5000)} else if (counter == 23) {
                 setTimeout(() => {
-                
+                    endgame()
                 }, 5000)}
             
         
