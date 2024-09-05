@@ -44,6 +44,21 @@ function startgame() {
     nodealbutton.classList.add("nodealbutton")
     nodealbutton.textContent = "No Deal"
 
+    let winbox = document.createElement("div")
+    let dealtextcontainer = document.createElement("div")
+    dealtextcontainer.classList.add("dealtextcontainer")
+    let boxtextcontainer =document.createElement("div")
+    boxtextcontainer.classList.add("boxtextcontainer")
+    boxtextcontainer.textContent = "your box had:"
+
+        winbox.classList.add("winbox")
+        dealornodealcontainer.appendChild(winbox)
+        winbox.appendChild(dealtextcontainer)
+        winbox.appendChild(boxtextcontainer)
+        
+
+    winbox.style.display = "none"
+
 
     
     offerbox.style.display = "none"
@@ -265,19 +280,36 @@ function startgame() {
         amountholder.removeChild(amount22)
         amountholder.removeChild(amount23)
         amountholder.removeChild(amount24)
+        winbox.style.display = "flex"
         if (win == "deal") {
-            
+            let dealtext = document.createElement("div")
+            let dealtext2 = document.createElement("div")
+            dealtext2.classList.add("deal")
+            dealtext.classList.add("dealtext")
+            dealtext.textContent = "You win:"
+            dealtext2.textContent = offer.value
+            dealtextcontainer.appendChild(dealtext)
+            dealtextcontainer.appendChild(dealtext2)
         } else if (win == "nodeal") {
-
+            
         }
     }
+    box1.addEventListener("click", () => getwinnumber(boxnum1))
+    function getwinnumber(box) {
+        
+        if (counter == 0) {
+            return box
+        }
+    }
+    let newbox = getwinnumber()
+    console.log(newbox)
 
     function deal() {
         offerbox.style.display = "none"
         dealornodealcontainer.removeChild(dealornodeal)
         dealornodeal.removeChild(dealbutton)
         dealornodeal.removeChild(nodealbutton)
-        offer.value = ""
+        
         win = "deal"
         endgame()
     }
@@ -313,10 +345,9 @@ function startgame() {
         })
         
     }
-
-    
-
+   
     function boxreveal(box, boxnumber) {
+    
         if (boxisselected == false) {
             let switchbox = document.createElement("div")
             switchbox.classList = "box"
@@ -328,7 +359,12 @@ function startgame() {
             boxholder.appendChild(switchbox)
             box.textContent = ""
             box.style.opacity = 0
-            boxisselected = true    
+            boxisselected = true   
+            counter++
+            let yourwinbox = document.createElement("div")
+            yourwinbox.classList.add("box")
+            yourwinbox.textContent = boxnumber
+            boxtextcontainer.appendChild(yourwinbox)
         } else {
         box.textContent = boxnumber
         let deletenumber = boxnumber
@@ -372,6 +408,9 @@ function startgame() {
         
         }
     }
+    
+    
+   
 
     function deleteamount(number) {
         

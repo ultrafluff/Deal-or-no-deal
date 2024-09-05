@@ -800,4 +800,43 @@ html {
   width: 350px;
   background-color: #1b3e82  ;
   border: #2460ae 4px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dealtextcontainer {
+  height: 150px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dealtext {
+  color: white;
+  font-size: 50px;
+}
+
+.deal {
+  color: white;
+  font-size: 50px;
+}
+
+.yourboxhad {
+  color: white;
+  font-size: 50px;
+}
+
+.boxtextcontainer {
+  height: 150px;
+  width: 350px;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
