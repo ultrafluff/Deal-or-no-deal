@@ -217,6 +217,14 @@ function startgame() {
     }
 
        
+    function nodeal() {
+        offerbox.style.display = "none"
+        dealornodealcontainer.removeChild(dealornodeal)
+        dealornodeal.removeChild(dealbutton)
+        dealornodeal.removeChild(nodealbutton)
+        offer.value = ""
+        
+    }
     
     function offernumber() {
         offerbox.style.display = "flex"
@@ -230,10 +238,10 @@ function startgame() {
                 offertext.textContent = offeramount
                 offerbox.appendChild(offertext)
                 dealornodeal.style.opacity = "100%"
-                
                 dealornodeal.appendChild(dealbutton)
                 dealornodeal.appendChild(nodealbutton)
 
+                nodealbutton.addEventListener("click", nodeal)
             }
         })
         
@@ -261,31 +269,31 @@ function startgame() {
         setTimeout(() => {
             counter++
         }, 5000)
-        if (counter == 0) {
+        if (counter == 4) {
             setTimeout(() => {
                 offernumber()
             }, 5000)} else if (counter == 8) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)} else if (counter == 11) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)} else if (counter == 14) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)} else if (counter == 17) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)}else if (counter == 19) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)}
             else if (counter == 21) {
             setTimeout(() => {
-            alert("deal or no deal")
+                offernumber()
             }, 5000)} else if (counter == 22) {
                 setTimeout(() => {
-                alert("deal or no deal")
+                
                 }, 5000)}
             
         
