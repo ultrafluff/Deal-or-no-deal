@@ -87,7 +87,9 @@ function startgame() {
     let box1 = document.createElement("div")
     boxisselected = false
 
-    
+    function playaudio(name) {
+        name.play()
+    }
   
    console.log
 
@@ -365,6 +367,9 @@ function startgame() {
         box.textContent = boxnumber
         let deletenumber = boxnumber
         box.style.color = "red"
+        let boxopen = document.getElementById("boxopen")
+        playaudio(boxopen)
+
         setTimeout(() => amountandboxdelelte(box), 5000)
         console.log(deletenumber)
         deleteamount(deletenumber) 
