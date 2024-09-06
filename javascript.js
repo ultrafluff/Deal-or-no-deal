@@ -4,7 +4,7 @@ let gamecontainer = document.createElement("div")
 gamecontainer.classList.add("gamecontainer")
 gamecontainer.classList.add("titlescreen")
 body.appendChild(gamecontainer)
-
+let spaceclicked = false
 
 let boxisselected
 let win = ""
@@ -395,7 +395,10 @@ function startgame() {
             }, 5000)}else if (counter == 20) {
             setTimeout(() => {
                 offernumber()
-            }, 5000)}
+            }, 5000)} else if (counter == 21) {
+                setTimeout(() => {
+                    offernumber()
+                }, 5000)}
             else if (counter == 22) {
             setTimeout(() => {
                 offernumber()
@@ -542,8 +545,11 @@ function startgame() {
 
 document.addEventListener('keyup', event => {
     if (event.code === 'Space') {
+        if (spaceclicked === false) {
         startgame()
         assignboxes()
+        spaceclicked = true
+        }
     }
   })
   
