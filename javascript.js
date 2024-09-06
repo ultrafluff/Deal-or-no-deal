@@ -89,7 +89,7 @@ function startgame() {
 
     
   
-   
+   console.log
 
 
     box1.textContent = "1"
@@ -296,16 +296,6 @@ function startgame() {
             dealtext.textContent = "You win:"
         }
     }
-    box1.addEventListener("click", () => getwinnumber(boxnum1))
-    function getwinnumber(box) {
-        
-        if (counter == 0) {
-            return box
-        }
-    }
-    let newbox = getwinnumber()
-    console.log(newbox)
-
     function deal() {
         offerbox.style.display = "none"
         dealornodealcontainer.removeChild(dealornodeal)
@@ -360,13 +350,17 @@ function startgame() {
             boxholder.appendChild(yourboxtext)
             boxholder.appendChild(switchbox)
             box.textContent = ""
+            
             box.style.opacity = 0
-            boxisselected = true   
-            counter++
+            boxisselected = true
+            
             let yourwinbox = document.createElement("div")
             yourwinbox.classList.add("box")
             yourwinbox.textContent = boxnumber
             boxtextcontainer.appendChild(yourwinbox)
+            console.log(box.style.ocacity)
+            box.style.pointerEvents = "none"
+            
         } else {
         box.textContent = boxnumber
         let deletenumber = boxnumber
@@ -374,8 +368,9 @@ function startgame() {
         setTimeout(() => amountandboxdelelte(box), 5000)
         console.log(deletenumber)
         deleteamount(deletenumber) 
+        counter++
         setTimeout(() => {
-            counter++
+            box.style.pointerEvents = "none"
         }, 5000)
         if (counter == 5) {
             setTimeout(() => {
