@@ -370,13 +370,20 @@ function startgame() {
         let boxopen = document.getElementById("boxopen")
         playaudio(boxopen)
 
-        setTimeout(() => amountandboxdelelte(box), 5000)
+        let amountdissapear = document.getElementById("amountdissapear")
+        document.addEventListener('keyup', event => {
+            if (event.code === 'ShiftRight') {
+        
+                amountandboxdelelte(box)
+                box.style.pointerEvents = "none"
+                playaudio(amountdissapear)
+            }
+          })
+    
         console.log(deletenumber)
         deleteamount(deletenumber) 
         counter++
-        setTimeout(() => {
-            box.style.pointerEvents = "none"
-        }, 5000)
+        
         if (counter == 5) {
             setTimeout(() => {
                 offernumber()
