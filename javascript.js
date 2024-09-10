@@ -294,6 +294,7 @@ function startgame() {
             dealtext.classList.add("dealtext")
             dealtext.textContent = "You win:"
             dealtext2.textContent = offer.value
+            
             dealtextcontainer.appendChild(dealtext)
             dealtextcontainer.appendChild(dealtext2)
         } else if (win == "nodeal") {
@@ -334,8 +335,9 @@ function startgame() {
         addEventListener("keydown", function (e) {
             if (e.code === "Enter") {
                 let offeramount = offer.value
+                
                 offerbox.removeChild(offer)
-                offertext.textContent = offeramount.toLocaleString()
+                offertext.textContent = offeramount
                 offerbox.appendChild(offertext)
                 dealornodeal.style.opacity = "100%"
                 dealornodeal.appendChild(dealbutton)
@@ -377,24 +379,31 @@ function startgame() {
             
             let yourwinbox = document.createElement("div")
             yourwinbox.classList.add("box")
-            yourwinbox.textContent = boxnumber
+            yourwinbox.textContent = boxnumber + "$"
+            if (boxnumber < 7600) {
+                yourwinbox.style.fontSize = "50px"
+            } else if (boxnumber < 76000) {
+                yourwinbox.style.fontSize = "40px"
+            } else if (boxnumber < 550000) {
+                yourwinbox.style.fontSize = "32px"
+            }
             boxtextcontainer.appendChild(yourwinbox)
             console.log(box.style.ocacity)
             box.style.pointerEvents = "none"
             
         } else {
         if (boxnumber < 7600) {
-            box.style.fontSize = "60px"
-        } else if (boxnumber < 76000) {
             box.style.fontSize = "50px"
-        } else if (boxnumber < 550000) {
+        } else if (boxnumber < 76000) {
             box.style.fontSize = "40px"
+        } else if (boxnumber < 550000) {
+            box.style.fontSize = "32px"
         }
-        box.textContent = boxnumber
+        box.textContent = boxnumber 
         console.log(boxnumber)
         let deletenumber = boxnumber.toLocaleString()
         let newnum = boxnumber.toLocaleString()
-        box.textContent = newnum
+        box.textContent = newnum + "$"
         box.style.color = "red"
         let boxopen = document.getElementById("boxopen")
         let bigopen = document.getElementById("500000reveal")
