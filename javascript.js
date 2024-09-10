@@ -6,6 +6,10 @@ gamecontainer.classList.add("titlescreen")
 body.appendChild(gamecontainer)
 let spaceclicked = false
 
+
+
+
+
 let boxisselected
 let win = ""
 function startgame() {
@@ -297,6 +301,7 @@ function startgame() {
             dealtext.classList.add("dealtext")
             dealtext.textContent = "You win:"
         }
+        
     }
     function deal() {
         offerbox.style.display = "none"
@@ -318,6 +323,9 @@ function startgame() {
         
     }
     
+    
+
+
     function offernumber() {
         offerbox.style.display = "flex"
         offerbox.textContent = "offer:"
@@ -341,7 +349,7 @@ function startgame() {
     }
    
     function boxreveal(box, boxnumber) {
-    
+        
         if (boxisselected == false) {
             let switchbox = document.createElement("div")
             switchbox.classList = "box"
@@ -351,6 +359,7 @@ function startgame() {
             yourboxtext.textContent = "your box"
             boxholder.appendChild(yourboxtext)
             boxholder.appendChild(switchbox)
+            
             box.textContent = ""
             
             box.style.opacity = 0
@@ -364,56 +373,69 @@ function startgame() {
             box.style.pointerEvents = "none"
             
         } else {
+            
         box.textContent = boxnumber
         let deletenumber = boxnumber
+        let newnum = boxnumber.toLocaleString()
+        box.textContent = newnum
         box.style.color = "red"
         let boxopen = document.getElementById("boxopen")
+        let bigopen = document.getElementById("500000reveal")
+        counter++
+        if (boxnumber == 500000) {
+            playaudio(bigopen)
+        } else {
         playaudio(boxopen)
-
+        }
+        
         let amountdissapear = document.getElementById("amountdissapear")
         document.addEventListener('keyup', event => {
             if (event.code === 'ShiftRight') {
-        
+                console.log(counter)
                 amountandboxdelelte(box)
                 box.style.pointerEvents = "none"
                 playaudio(amountdissapear)
+
+                if (counter == 5) {
+                    offernumber()
+             }   else if (counter == 9) {
+                offernumber()
+            } else if (counter == 12) {
+                
+                offernumber()
+            } else if (counter == 15) {
+                offernumber()
+            } else if (counter == 18) {
+                offernumber()
+            }else if (counter == 20) {
+                
+                offernumber()
+            } else if (counter == 21) {
+                    
+                offernumber()
+            }
+                else if (counter == 22) {
+               
+                    offernumber()
+                } else if (counter == 23) {
+                    
+                        endgame()
+                }
+                
+                
             }
           })
-    
+          
+          document.addEventListener('keyup', event => {
+            if (event.code === 'ShiftRight') {
+                console.log(counter)
+          
+            }})
         console.log(deletenumber)
         deleteamount(deletenumber) 
-        counter++
         
-        if (counter == 5) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 9) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 12) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 15) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 18) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)}else if (counter == 20) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 21) {
-                setTimeout(() => {
-                    offernumber()
-                }, 5000)}
-            else if (counter == 22) {
-            setTimeout(() => {
-                offernumber()
-            }, 5000)} else if (counter == 23) {
-                setTimeout(() => {
-                    endgame()
-                }, 5000)}
-            
+        
+       
         
         
         console.log(counter)
