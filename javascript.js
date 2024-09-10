@@ -340,9 +340,19 @@ function startgame() {
                 dealornodeal.style.opacity = "100%"
                 dealornodeal.appendChild(dealbutton)
                 dealornodeal.appendChild(nodealbutton)
-
                 nodealbutton.addEventListener("click", nodeal)
                 dealbutton.addEventListener("click", deal)
+                let offerlow = document.getElementById("offerlow")
+                let offermiddle = document.getElementById("offermiddle")
+                let offerhigh = document.getElementById("offerhigh")
+
+                if (offer.value < 50000) {
+                    playaudio(offerlow)
+                } else if (offer.value < 99999.99) {
+                    playaudio(offermiddle)
+                } else {
+                    playaudio(offerhigh)
+                }
             }
         })
         
