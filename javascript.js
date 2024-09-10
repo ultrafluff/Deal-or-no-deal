@@ -383,7 +383,13 @@ function startgame() {
             box.style.pointerEvents = "none"
             
         } else {
-            
+        if (boxnumber < 7600) {
+            box.style.fontSize = "60px"
+        } else if (boxnumber < 76000) {
+            box.style.fontSize = "50px"
+        } else if (boxnumber < 550000) {
+            box.style.fontSize = "40px"
+        }
         box.textContent = boxnumber
         let deletenumber = boxnumber
         let newnum = boxnumber.toLocaleString()
@@ -391,6 +397,7 @@ function startgame() {
         box.style.color = "red"
         let boxopen = document.getElementById("boxopen")
         let bigopen = document.getElementById("500000reveal")
+        
         counter++
         if (boxnumber == 500000) {
             playaudio(bigopen)
