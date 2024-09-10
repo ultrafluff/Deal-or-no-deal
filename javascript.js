@@ -335,7 +335,7 @@ function startgame() {
             if (e.code === "Enter") {
                 let offeramount = offer.value
                 offerbox.removeChild(offer)
-                offertext.textContent = offeramount
+                offertext.textContent = offeramount.toLocaleString()
                 offerbox.appendChild(offertext)
                 dealornodeal.style.opacity = "100%"
                 dealornodeal.appendChild(dealbutton)
@@ -391,7 +391,8 @@ function startgame() {
             box.style.fontSize = "40px"
         }
         box.textContent = boxnumber
-        let deletenumber = boxnumber
+        console.log(boxnumber)
+        let deletenumber = boxnumber.toLocaleString()
         let newnum = boxnumber.toLocaleString()
         box.textContent = newnum
         box.style.color = "red"
@@ -536,51 +537,51 @@ function startgame() {
    let  amount13 = document.createElement("div")
     amount13.classList.add("amountbox13")
     amountholder.appendChild(amount13)
-    amount13.textContent = "1000"
+    amount13.textContent = "1,000"
     let amount14 = document.createElement("div")
     amount14.classList.add("amountbox14")
     amountholder.appendChild(amount14)
-    amount14.textContent = "2500"
+    amount14.textContent = "2,500"
     let amount15 = document.createElement("div")
     amount15.classList.add("amountbox15")
     amountholder.appendChild(amount15)
-    amount15.textContent = "5000"
+    amount15.textContent = "5,000"
     let amount16 = document.createElement("div")
     amount16.classList.add("amountbox16")
     amountholder.appendChild(amount16)
-    amount16.textContent = "7500"
+    amount16.textContent = "7,500"
     let amount17 = document.createElement("div")
     amount17.classList.add("amountbox17")
     amountholder.appendChild(amount17)
-    amount17.textContent = "10000"
+    amount17.textContent = "10,000"
     let amount18 = document.createElement("div")
     amount18.classList.add("amountbox18")
     amountholder.appendChild(amount18)
-    amount18.textContent = "15000"
+    amount18.textContent = "15,000"
     let amount19 = document.createElement("div")
     amount19.classList.add("amountbox19")
     amountholder.appendChild(amount19)
-    amount19.textContent = "25000"
+    amount19.textContent = "25,000"
     let amount20 = document.createElement("div")
     amount20.classList.add("amountbox20")
     amountholder.appendChild(amount20)
-    amount20.textContent = "50000"
+    amount20.textContent = "50,000"
     let amount21 = document.createElement("div")
     amount21.classList.add("amountbox21")
     amountholder.appendChild(amount21)
-    amount21.textContent = "75000"
+    amount21.textContent = "75,000"
     let amount22 = document.createElement("div")
     amount22.classList.add("amountbox22")
     amountholder.appendChild(amount22)
-    amount22.textContent = "100000"
+    amount22.textContent = "100,000"
     let amount23 = document.createElement("div")
     amount23.classList.add("amountbox23")
     amountholder.appendChild(amount23)
-    amount23.textContent = "250000"
+    amount23.textContent = "250,000"
    let amount24 = document.createElement("div")
     amount24.classList.add("amountbox24")
     amountholder.appendChild(amount24)
-    amount24.textContent = "500000"
+    amount24.textContent = "500,000"
     const amountboxes = [amount1, amount2, amount3, amount4,
         amount5, amount6, amount7, amount8, amount9, amount10, amount11,
         amount12, amount13, amount14, amount15, amount16, amount17, amount18,
